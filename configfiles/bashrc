@@ -1,0 +1,85 @@
+# bashrc constructed on boost with rwxrob
+
+# check we are on interactive shell
+case $- in
+    *i*) ;;
+    *) return ;;
+esac
+
+# ---- Environmental variables ----
+
+export TERM=xterm-256color
+export EDITOR=vi
+export VISUAL=vi
+
+# ---- Colors ----
+
+black=$(printf "\e[30m")
+red=$(printf "\e[31m")
+green=$(printf "\e[32m")
+yellow=$(printf "\e[33m")
+blue=$(printf "\e[34m")
+magenta=$(printf "\e[35m")
+cyan=$(printf "\e[36m")
+gray=$(printf "\e[37m")
+
+reset=$(printf "\e[0m")
+underline=$(printf "\e[4m")
+
+# ---- PAGER ----
+
+if test -x /usr/bin/lesspipe; then
+    export LESSOPEN="| /usr/bin/lesspipe %s";
+    export LESSCLOSE="/usr/bin/lesspipe %s %s";
+fi
+
+# ---- Pager Colors ----
+
+export LESS_TERMCAP_mb="${magenta}"
+export LESS_TERMCAP_md="${yellow}"
+export LESS_TERMCAP_me=""
+export LESS_TERMCAP_se=""
+export LESS_TERMCAP_so="${blue}"
+export LESS_TERMCAP_ue=""
+export LESS_TERMCAP_so="${underline}"
+
+# ---- dircolors ----
+
+if command -v dircolors &>/dev/null; then
+    if test -r ~/.config/bash/dircolors; then
+        eval $(dircolors -b ~/.config/bash/dircolors)
+    else
+        eval $(dircolors -b)
+    fi
+fi
+
+# ---- vimode ----
+
+set -o vi
+
+# ---- History ----
+
+export HISTCONTROL=ignoreboth
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+shopt -s histappend
+
+
+# ---- Aliases ----
+
+alias c='printf "\e[H\e[2J"'
+alias ls="ls -h --color=auto"
+
+# ---- PROMPT ----
+
+__ps1() {
+    PS1='\[${yellow}\]\u\[${gray}\]@\[${blue}\]\h\[${gray}\]:\[${green}\]\W\[${yellow}\]$ \[${reset}\]'
+    export PS1
+}
+
+export PROMPT_COMMAND='__ps1'
+
+# ---- PATH ----
+
+PATH="${PATH}:${HOME}/.local/bin"
+PATH="${PATH}:/mnt/c/Program Files (x86)/Google/Chrome/Application/"
