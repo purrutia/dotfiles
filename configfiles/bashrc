@@ -69,6 +69,8 @@ shopt -s histappend
 
 alias c='printf "\e[H\e[2J"'
 alias ls="ls -h --color=auto"
+alias repos="cd ${HOME}/repos/github.com/${USER}/"
+alias zk="cd ${HOME}/repos/github.com/${USER}/zettelkasten/"
 
 # ---- PROMPT ----
 
@@ -81,5 +83,5 @@ export PROMPT_COMMAND='__ps1'
 
 # ---- PATH ----
 
-PATH="${PATH}:${HOME}/.local/bin"
-PATH="${PATH}:/mnt/c/Program Files (x86)/Google/Chrome/Application/"
+export PATH="/mnt/c/Program Files (x86)/Google/Chrome/Application/:${PATH}"
+export PATH="${HOME}/.local/bin:${PATH}"
