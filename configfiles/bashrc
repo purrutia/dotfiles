@@ -11,6 +11,18 @@ esac
 export TERM=xterm-256color
 export EDITOR=vi
 export VISUAL=vi
+export REPOS="${HOME}/repos/github.com/${USER}/"
+export SCRIPTS="${REPOS}/utils/utils/"
+export WORKSCRIPTS="${REPOS}/work_utils/"
+export ZETTELKASTEN="${REPOS}/zettelkasten/"
+
+# ---- Aliases ----
+
+alias c='printf "\e[H\e[2J"'
+alias ls="ls -h --color=auto"
+alias repos="cd ${REPOS}"
+alias scripts="cd ${SCRIPTS}"
+alias zk="cd ${ZETTELKASTEN}"
 
 # ---- Colors ----
 
@@ -65,13 +77,6 @@ export HISTFILESIZE=10000
 shopt -s histappend
 
 
-# ---- Aliases ----
-
-alias c='printf "\e[H\e[2J"'
-alias ls="ls -h --color=auto"
-alias repos="cd ${HOME}/repos/github.com/${USER}/"
-alias zk="cd ${HOME}/repos/github.com/${USER}/zettelkasten/"
-
 # ---- PROMPT ----
 
 __ps1() {
@@ -84,4 +89,5 @@ export PROMPT_COMMAND='__ps1'
 # ---- PATH ----
 
 export PATH="/mnt/c/Program Files (x86)/Google/Chrome/Application/:${PATH}"
-export PATH="${HOME}/.local/bin:${PATH}"
+export PATH="${SCRIPTS}:${PATH}"
+export PATH="${WORKSCRIPTS}:${PATH}"
