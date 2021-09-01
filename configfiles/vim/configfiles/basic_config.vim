@@ -1,0 +1,93 @@
+" .config/vim/configfiles/basic_config.vim
+
+" Turn on syntax highlighting
+syntax on
+
+" Setting line numbers
+set nu
+set relativenumber
+
+" TABS
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+" Indentation
+set smartindent
+
+" Disable the default Startup message
+set shortmess+=I
+
+" Disable swap files and backup
+set noswapfile
+set nobackup
+
+" Always show the status line at the bottom, even if you only have one window
+" open.
+set laststatus=2
+
+" UNDO dir
+set undodir=~/.local/vim/undodir
+set undofile
+
+" The backspace key has slightly unintuitive behavior by default. For example,
+" by default, you can't backspace before the insertion point set with 'i'.
+" This configuration makes backspace behave more reasonably, in that you can
+" backspace over anything.
+set backspace=indent,eol,start
+
+" Set Leader key
+let g:mapleader=" "
+
+" By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't
+" shown in any window) that has unsaved changes. This is to prevent you from "
+" forgetting about unsaved changes and then quitting e.g. via `:qa!`. We find
+" hidden buffers helpful enough to disable this protection. See `:help hidden`
+" for more information on this.
+set hidden
+
+" This setting makes search case-insensitive when all characters in the string
+" being searched are lowercase. However, the search becomes case-sensitive if
+" it contains any capital letters. This makes searching more convenient.
+set ignorecase
+set smartcase
+set nohlsearch
+
+" Enable searching as you type, rather than waiting till you press enter.
+set incsearch
+
+" Disable audible bell because it's annoying.
+set noerrorbells 
+
+" Enable mouse support. You should avoid relying on this too much, but it can
+" sometimes be convenient.
+set mouse+=a
+
+" Open horizontal splits below by default
+set splitbelow
+
+" Color column at 100 characters
+set colorcolumn=100
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" give more space for displaying messages
+set cmdheight=2
+
+" To mantain visually centered the cursor
+set scrolloff=8
+
+" console colors
+set termguicolors
+
+" cursor
+set guicursor=
+
+" NETRW window size to 25%
+let g:netrw_winsize=25
+
+" No Folding
+set nofoldenable
+
+" Autowrite
+set autowrite

@@ -1,0 +1,7 @@
+" PHNG64 vimrc
+
+source ~/.config/vim/configfiles/basic_config.vim
+source ~/.config/vim/configfiles/mappings.vim
+source ~/.config/vim/configfiles/plugins.vim
+source ~/.config/vim/configfiles/after_plugins.vim
+source ~/.config/vim/configfiles/WSL.vim
