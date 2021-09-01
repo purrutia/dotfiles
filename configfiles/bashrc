@@ -11,10 +11,11 @@ esac
 export TERM=xterm-256color
 export EDITOR=vi
 export VISUAL=vi
-export REPOS="${HOME}/repos/github.com/${USER}/"
+export REPOS="${HOME}/repos/github.com/${USER}"
 export SCRIPTS="${REPOS}/utils/utils/"
-export WORKSCRIPTS="${REPOS}/work_utils/"
+export WORKSCRIPTS="${REPOS}/work_utils/utils/"
 export ZETTELKASTEN="${REPOS}/zettelkasten/"
+export VIMWIKI="${REPOS}/my_vimwiki/"
 
 # ---- Aliases ----
 
