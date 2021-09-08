@@ -4,7 +4,7 @@
 syntax on
 
 " Setting line numbers
-set nu
+set number
 set relativenumber
 
 " TABS

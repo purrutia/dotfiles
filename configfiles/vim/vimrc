@@ -1,5 +1,7 @@
 " PHNG64 vimrc
 
+set nocompatible
+
 source ~/.config/vim/configfiles/basic_config.vim
 source ~/.config/vim/configfiles/mappings.vim
 source ~/.config/vim/configfiles/plugins.vim
