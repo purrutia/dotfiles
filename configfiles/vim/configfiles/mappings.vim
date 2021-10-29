@@ -65,3 +65,7 @@ nnoremap <leader>a <C-a>
 
 " Yank to the end of the line
 nnoremap Y y$
+
+" Go to links on helpfiles
+autocmd FileType help nnoremap <buffer> <CR> <C-]>
+autocmd FileType help nnoremap <buffer> <BS> <C-T>
