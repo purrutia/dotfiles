@@ -24,6 +24,7 @@ alias ls="ls -h --color=auto"
 alias repos="cd ${REPOS}"
 alias scripts="cd ${SCRIPTS}"
 alias zk="cd ${ZETTELKASTEN}"
+alias vi="nvim"
 
 # ---- Colors ----
 
@@ -93,3 +94,8 @@ export PATH="/mnt/c/Program Files (x86)/Google/Chrome/Application/:${PATH}"
 export PATH="/mnt/c/Program Files/Mozilla Firefox/:${PATH}"
 export PATH="${SCRIPTS}:${PATH}"
 export PATH="${WORKSCRIPTS}:${PATH}"
+
+# ---- DOCKER DAEMON ----
+if [ -f ~/bin/docker-service ]; then
+    . ~/bin/docker-service
+fi

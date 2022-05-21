@@ -16,5 +16,11 @@ Plug 'vimwiki/vimwiki'
 " GRUVBOX
 Plug 'gruvbox-community/gruvbox'
 
+" Calendar
+Plug 'mattn/calendar-vim'
+
+" Distraction free
+Plug 'junegunn/goyo.vim'
+
 " Initialize plugin system
 call plug#end()
