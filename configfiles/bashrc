@@ -25,6 +25,8 @@ alias repos="cd ${REPOS}"
 alias scripts="cd ${SCRIPTS}"
 alias zk="cd ${ZETTELKASTEN}"
 alias vi="nvim"
+alias '?'="duck"
+alias '??'="google"
 
 # ---- Colors ----
 
