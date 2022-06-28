@@ -102,6 +102,7 @@ export PATH="${WORKSCRIPTS}:${PATH}"
 export PATH="/usr/local/go/bin/:${PATH}"
 export PATH="/mnt/c/Program Files (x86)/Google/Chrome/Application/:${PATH}"
 export PATH="/mnt/c/Program Files/Mozilla Firefox/:${PATH}"
+export PATH="/mnt/c/Program Files/SumatraPDF/:${PATH}"
 
 # ---- DOCKER DAEMON ----
 if [ -f ~/bin/docker-service ]; then
