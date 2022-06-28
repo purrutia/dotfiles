@@ -27,6 +27,11 @@ alias zk="cd ${ZETTELKASTEN}"
 alias vi="nvim"
 alias '?'="duck"
 alias '??'="google"
+alias mydrive="cd /mnt/g/My\ Drive/"
+alias cdch="cd /mnt/g/My\ Drive/PROJECTS/Carabineros\ de\ Chile"
+alias cdlc="cd /mnt/g/My\ Drive/PROJECTS/Codelco"
+alias bhp="cd /mnt/g/My\ Drive/PROJECTS/BHP\ Billiton"
+alias mscolors="cat /mnt/g/My\ Drive/TEMPLATES/Reports/colors/ms_colors.tex"
 
 # ---- Colors ----
 
@@ -92,10 +97,11 @@ export PROMPT_COMMAND='__ps1'
 
 # ---- PATH ----
 
-export PATH="/mnt/c/Program Files (x86)/Google/Chrome/Application/:${PATH}"
-export PATH="/mnt/c/Program Files/Mozilla Firefox/:${PATH}"
 export PATH="${SCRIPTS}:${PATH}"
 export PATH="${WORKSCRIPTS}:${PATH}"
+export PATH="/usr/local/go/bin/:${PATH}"
+export PATH="/mnt/c/Program Files (x86)/Google/Chrome/Application/:${PATH}"
+export PATH="/mnt/c/Program Files/Mozilla Firefox/:${PATH}"
 
 # ---- DOCKER DAEMON ----
 if [ -f ~/bin/docker-service ]; then
