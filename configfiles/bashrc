@@ -32,6 +32,7 @@ alias cdch="cd /mnt/g/My\ Drive/PROJECTS/Carabineros\ de\ Chile"
 alias cdlc="cd /mnt/g/My\ Drive/PROJECTS/Codelco"
 alias bhp="cd /mnt/g/My\ Drive/PROJECTS/BHP\ Billiton"
 alias mscolors="cat /mnt/g/My\ Drive/TEMPLATES/Reports/colors/ms_colors.tex"
+alias tk="tmux kill-session"
 
 # ---- Colors ----
 
