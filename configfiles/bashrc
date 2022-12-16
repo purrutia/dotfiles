@@ -11,7 +11,7 @@ esac
 export TERM=xterm-256color
 export EDITOR=vi
 export VISUAL=vi
-export REPOS="${HOME}/repos/github.com/${USER}"
+export REPOS="${HOME}/repos"
 export SCRIPTS="${REPOS}/utils/utils/"
 export WORKSCRIPTS="${REPOS}/work_utils/utils/"
 export ZETTELKASTEN="${REPOS}/zettelkasten/"
@@ -48,23 +48,6 @@ gray=$(printf "\e[37m")
 
 reset=$(printf "\e[0m")
 underline=$(printf "\e[4m")
-
-# ---- PAGER ----
-
-if test -x /usr/bin/lesspipe; then
-    export LESSOPEN="| /usr/bin/lesspipe %s";
-    export LESSCLOSE="/usr/bin/lesspipe %s %s";
-fi
-
-# ---- Pager Colors ----
-
-export LESS_TERMCAP_mb="${magenta}"
-export LESS_TERMCAP_md="${yellow}"
-export LESS_TERMCAP_me=""
-export LESS_TERMCAP_se=""
-export LESS_TERMCAP_so="${blue}"
-export LESS_TERMCAP_ue=""
-export LESS_TERMCAP_so="${underline}"
 
 # ---- dircolors ----
 
@@ -115,10 +98,10 @@ fi
 # ---- FZF ----
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
+export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden --follow --exclude .git'
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}'"
 
-export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
+export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden --follow --exclude.git'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
